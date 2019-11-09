@@ -22,16 +22,12 @@ def find_greater_pair(src)
   large_num = []
   row_index = 0 
   while row_index < src.length do 
-    element_index = 0 
-    while element_index < src[row_index].length do 
-      max = 0 
-      if src[row_index][element_index] > max 
-        max = src[row_index][element_index]
-        element_index += 1 
-      end 
-      large_num << max
-    end
-    row_index += 1
+    if src[row_index][0] > src[row_index][1] 
+      large_num << src[row_index][0]
+    elsif src[row_index][0] < src[row_index][1]
+      large_num << src[row_index][1]
+    else 
+      large_num << src[row_index][0]
   end
   large_num
 end
