@@ -29,6 +29,7 @@ def find_greater_pair(src)
     else 
       large_num << src[row_index][0]
   end
+  row_index +=1
   large_num
 end
 
